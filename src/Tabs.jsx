@@ -1,8 +1,8 @@
 import { useState } from "react";
 import FileTranslator from "./components/FileTranslator";
-import DocumentSummarize from "./components/DocumentSummarize";
 import TranslatorMain from "./components/TranslatorMain";
 import AudioTranslator from "./components/Projects/AudioTranslator";
+import ImageTranslation from "./components/ImageTranslation";
 
 const TabComponent = ({ setReqAccessOpen, JWT }) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -19,8 +19,8 @@ const TabComponent = ({ setReqAccessOpen, JWT }) => {
       props: { setReqAccessOpen, JWT },
     },
     {
-      name: "Document Summarize",
-      component: DocumentSummarize,
+      name: "Image Translator",
+      component: ImageTranslation,
       props: { setReqAccessOpen, JWT },
     },
     {
