@@ -49,7 +49,7 @@ export default function RequstAccess({
         return;
       }
       const response = await axios.post(
-        `http://3.82.219.176:4000/api/auth/request-access`,
+        `https://3.82.219.176:4000/api/auth/request-access`,
         {
           email: email.trim(),
           name: name.trim(),
