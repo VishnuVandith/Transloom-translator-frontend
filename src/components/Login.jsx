@@ -10,8 +10,8 @@ import {
 } from "@material-tailwind/react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { userAxiosInstence } from "../utils/axios-utils";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
+import axios from "axios";
 export default function Login({
   OpenLogin,
   setLoginOpen,
@@ -56,10 +56,13 @@ export default function Login({
         setError("Please enter a valid email.");
         return;
       }
-      const response = await userAxiosInstence.post(`/api/auth/user-login`, {
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        `http://3.82.219.176:4000/api/auth/user-login`,
+        {
+          email: email,
+          password: password,
+        }
+      );
       if (response.status === 200) {
         toast.success("Login Successfully", {
           autoClose: 800,

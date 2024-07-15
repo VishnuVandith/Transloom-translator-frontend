@@ -10,7 +10,7 @@ import {
 import ThankYouModal from "./ThankYouModal";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { userAxiosInstence } from "../utils/axios-utils";
+import axios from "axios";
 
 export default function RequstAccess({
   reqAccessOpen,
@@ -48,8 +48,8 @@ export default function RequstAccess({
         setError("Please enter a valid email.");
         return;
       }
-      const response = await userAxiosInstence.post(
-        `/api/auth/request-access`,
+      const response = await axios.post(
+        `http://3.82.219.176:4000/api/auth/request-access`,
         {
           email: email.trim(),
           name: name.trim(),
