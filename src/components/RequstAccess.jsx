@@ -49,7 +49,7 @@ export default function RequstAccess({
         return;
       }
       const response = await axios.post(
-        `http://3.82.219.176:4000/api/auth/request-access`,
+        `http://18.209.45.194:4000/api/auth/request-access`,
         {
           email: email.trim(),
           name: name.trim(),
@@ -71,8 +71,8 @@ export default function RequstAccess({
         console.error("Error:", err);
         setError(
           err.response?.data?.error ||
-            err.message ||
-            "Failed to request access."
+          err.message ||
+          "Failed to request access."
         );
       }
     }
