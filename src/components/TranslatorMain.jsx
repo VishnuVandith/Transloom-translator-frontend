@@ -37,7 +37,7 @@ function TranslatorMain({ setReqAccessOpen, JWT }) {
       try {
         console.log("api called");
         const response = await userAxiosInstence.get(
-          `http://18.212.127.111/translation/translate/${inputLanguage}/${outputLanguage}?text=${inputText}`
+          `https://api.transloom.com/translation/translate/${inputLanguage}/${outputLanguage}?text=${inputText}`
         );
         if (response) {
           console.log(response);

@@ -96,7 +96,7 @@ const FileTranslator = ({ setReqAccessOpen, JWT }) => {
 
     try {
       const response = await axios.post(
-        `http://18.212.127.111/ocrTranslation/translate_document/${sourceLanguage}/${targetLanguage}`,
+        `https://api.transloom.com/ocrTranslation/translate_document/${sourceLanguage}/${targetLanguage}`,
         formData,
         {
           headers: {

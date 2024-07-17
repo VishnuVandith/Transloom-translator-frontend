@@ -103,7 +103,7 @@ const ImageTranslation = ({ setReqAccessOpen, JWT }) => {
     try {
       const response = await axios.post(
         // http://18.212.127.111/ocrTranslation/translate_image/en/es
-        `http://18.212.127.111/ocrTranslation/translate_image/${sourceLanguage}/${targetLanguage}`,
+        `https://api.transloom.com/ocrTranslation/translate_image/${sourceLanguage}/${targetLanguage}`,
         formData,
         {
           headers: {
