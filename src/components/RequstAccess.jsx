@@ -49,7 +49,7 @@ export default function RequstAccess({
         return;
       }
       const response = await axios.post(
-        `http://18.209.45.194:4000/api/auth/request-access`,
+        `https://server.transloom.com/api/auth/request-access`,
         {
           email: email.trim(),
           name: name.trim(),
